@@ -1,0 +1,17 @@
+<h1>Genre</h1>
+
+<label>Genre name: </label><%=@genre.name%><br>
+
+<label>Songs of this genre:</label>
+<ol>
+<%@songs.each do |song| %>
+  <li><a href="/songs/<%=song.slug%>"><%= song.name %></a></li>
+<%end%>
+</ol>
+
+<label>Artists of this genre:</label>
+<ol>
+<%@artists.each do |artist| %>
+  <li><a href="/artists/<%=artist.slug%>"><%= artist.name %></a></li>
+<%end%>
+</ol>
